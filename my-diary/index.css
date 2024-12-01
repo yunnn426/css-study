@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #dddddd;
+}
+
+.diary {
+    width: 650px;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.diary__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.diary__divider {
+    margin-block: 30px;
+    border-top: 2px dotted lightgray;
+}
+
+.diary__content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    border: 2px solid #dddddd;
+}
+
+.diarytitle {
+    padding: 5px;
+    background-color: #dddddd;
+    border-radius: 5px;
+}
+
+.title {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 10px;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.goodday {
+    color: orange;
+    text-decoration: underline;
+}
+
+.divider {
+    border: 0;
+    border-top: 2px dotted lightgray;
+}
+
+.tilt {
+    font-style: italic;
+}
+
+.emphasize {
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.date {
+    text-align: right;
+    color: #919191;
+}
+
+.red {
+    color: red;
+    font-weight: 600;
+}
+
+.yellow {
+    color: coral;
+    font-weight: 600;
+}
+
+.blue {
+    color: mediumaquamarine;
+}
+
+/* flex */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid gray;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 100%;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo h1 a {
+    color: orange;
+    text-decoration: none;
+}
+
+.menu__ul {
+    display: flex;
+}
+
+.menu__ul li {
+    list-style: none;
+}
+
+.menu__ul li a {
+    display: block; /* a가 inline 태그이기 때문에 가로에는 패딩이 생기지만 위에는 패딩이 생길 수 없음 */
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.user {
+    width: 100px;
+}
