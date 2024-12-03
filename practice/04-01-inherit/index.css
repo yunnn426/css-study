@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  color: blueviolet; /* 상속 */
+  font-size: 38px; /* 상속 */
+  border: 4px solid orange /* 상속 X */
+}
+
+.inner-box {
+  color: aquamarine;
+}
