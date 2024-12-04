@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  border: 3px solid crimson;
+  padding: 10px;
+}
+
+.wrapper {
+  border: 3px solid aqua;
+  padding: 10px;
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: orange;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
