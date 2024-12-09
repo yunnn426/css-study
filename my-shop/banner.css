@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.mainBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 280px;
+  background-image: url('./img/banner.jpg');
+  background-size: cover;
+}
+
+.text {
+  font-size: 42px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  animation: titleText 0.8s ease-in-out;
+}
+
+@keyframes titleText {
+  from {
+    transform: translateY(70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
