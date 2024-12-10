@@ -8,6 +8,12 @@ html, body {
   padding: 0;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .mainBanner {
   display: flex;
   justify-content: center;
@@ -39,8 +45,9 @@ html, body {
 
 .mainContents {
   display: flex;
-  margin-block-start: 30px;
-  margin-inline: 250px;
+  padding: 10px;
+  max-width: 1320px;
+  gap: 10px;
 }
 
 .sidebar {
@@ -51,8 +58,8 @@ html, body {
 
 .sidebar__navigation {
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-inline: 50px;
   width: 150px;
   height: 200px;
   background-color: orange;
@@ -60,24 +67,31 @@ html, body {
 }
 
 .sidebar__navigation-list {
-  padding-inline-start: 20px;
+  width: 100%;
+  padding-inline: 20px;
 }
 
 .sidebar__navigation-item {
-  margin-top: 10px;
+  width: 100%;
+  padding-block: 8px;
+  flex-wrap: nowrap;
   color: white;
   list-style: none;
   cursor: pointer;
 }
 
 .sidebar__btn-add {
+  display: flex;
   padding-block: 5px;
-  padding-inline: 20px;
+  padding-inline: 15px;
   margin-block-start: 10px;
   width: 150px;
+  gap: 10px;
   text-align: left;
   color: white;
+  border: 2px solid black;
   background-color: black;
+  cursor: pointer;
 }
 
 .itemWrap {
@@ -149,33 +163,162 @@ html, body {
   opacity: 0;
   transform: translateY(50px);
 }
+/* PC */
 
-.item:hover .textBox__name {
-  opacity: 1;
-  transform: translateY(-10px);
+/* tablet */
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .textBox {
+    position: relative;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+  }
+
+  .item {
+    width: calc(25% - 7px);
+    border-radius: 0;
+    overflow: visible;
+  }
+
+
+  .textBox p {
+    color: black;
+  }
+  
+  .textBox__name {
+    font-size: 18px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .textBox__price {
+    font-size: 12px;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.item:hover .textBox__price {
-  opacity: 1;
-  transform: translateY(-10px);
+/* mobile */
+@media screen and (max-width: 767px) {
+  .mainBanner {
+    height: 160px;
+  }
+
+  .text {
+    font-size: 26px;
+  }
+
+  .mainContents {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .sidebar__navigation {
+    width: 100%;
+    height: 40px;
+    border-radius: 0;
+  }
+
+  .sidebar__navigation-list {
+    display: flex;
+    padding-inline: 0;
+    max-width: 350px;
+  }
+
+  .sidebar__navigation-item {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .sidebar__navigation-item:hover {
+    padding-inline-start: 0;
+  }
+
+  .sidebar__btn-add {
+    display: none;
+  }
+
+  .itemWrap {
+    margin-inline: 10px;
+  }
+
+  .item {
+    width: calc(50% - 7px);
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .textBox {
+    position: relative;
+    left: 0;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #dddddd;
+  }
+
+  .textBox p {
+    color: black;
+  }
+  
+  .textBox__name {
+    font-size: 18px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .textBox__price {
+    font-size: 12px;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.item:hover:after {
-  opacity: 1;
-}
+/* pc에서만 hover */
+@media screen and (min-width: 1024px) {
+  .sidebar__navigation-item:hover {
+    padding-inline-start: 10px;
+    border-radius: 5px;
+    background-color: rgb(227, 153, 16);
+    transition: all 0.2s ease;
+  }
 
-.item:hover .imgBox {
-  transform: scale(1.1);
-  filter: blur(3px);
-}
+  .sidebar__btn-add:hover {
+    color: black;
+    background-color: white;
+    gap: 55px;
+    transition: gap 0.5s ease;
+  }
 
-.item:after,
-.item .imgBox,
-.item .textBox__name,
-.item .textBox__price {
-  transition: all 0.4s ease-in-out;
-}
+  .item:hover .textBox__name {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  
+  .item:hover .textBox__price {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  
+  .item:hover:after {
+    opacity: 1;
+  }
+  
+  .item:hover .imgBox {
+    transform: scale(1.1);
+    filter: blur(3px);
+  }
 
-.item .textBox__price {
-  transition-delay: 0.15s;
+  .item:after,
+  .item .imgBox,
+  .item .textBox__name,
+  .item .textBox__price {
+    transition: all 0.4s ease-in-out;
+  }
+
+  .item .textBox__price {
+    transition-delay: 0.15s;
+  }
 }

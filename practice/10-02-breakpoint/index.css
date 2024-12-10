@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 30px;
+  background-color: crimson;
+}
+
+.contents {
+  color: white;
+}
+
+.contents:after {
+  content: "저는 PC입니다.";
+}
+
+/* PC 기본 설정 */
+
+@media screen and (max-width: 767px) {
+  /* mobile */
+  .container {
+    background-color: skyblue;
+  }
+
+  .contents:after {
+    content: "저는 Mobile입니다."
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  /* tablet */
+  .container {
+    background-color: green;
+  }
+
+  .contents:after {
+    content: "저는 Tablet입니다."
+  }
+}

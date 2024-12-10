@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  padding: 30px;
+  height: 200px;
+  background-color: aquamarine;
+}
+
+/* 600 이하에서 */
+@media screen and (max-width: 600px) {
+  .box {
+    background-color: cadetblue;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.box1 {
+  padding: 30px;
+  width: 20%;
+  background-color: green;
+  color: white;
+}
+
+.box2 {
+  padding: 30px;
+  width: 80%;
+  background-color: orange;
+  color: white;
+}
+
+/* 601 이상에서 */
+@media screen and (min-width: 601px) { 
+  .container {
+    flex-direction: column;
+  }
+
+  .box1 {
+    width: 100%;
+  }
+
+  .box2 {
+    width: 100%;
+  }
+}
